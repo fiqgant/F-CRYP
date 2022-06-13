@@ -1,5 +1,5 @@
 # Y-CRYP
-Analyze your next crypto investment
+Analyze and predict your next crypto investment
 
 
 ## Demo
