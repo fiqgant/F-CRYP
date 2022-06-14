@@ -58,7 +58,7 @@ if choice == "Home":
     
   st.write("")
 
-  st.write("""  <p style=" font-size: 15px; font-weight:normal; font-family:verdana"> Y-CRYP is a special web service that allows you to view cryptocurrencies by many useful methods (technical indicators, graphical patterns, sentimental analysis, and more).</p>
+  st.write("""  <p style=" font-size: 15px; font-weight:normal; font-family:verdana"> Y-CRYP is a special web service that allows you to analyze and predict cryptocurrencies.</p>
   """, unsafe_allow_html=True)
 
     
