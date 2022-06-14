@@ -245,6 +245,44 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
     
+    
+    # Sentiment Analysis Etherium
+
+    st.write("  ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Bitcoin? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
+
+
+    df = get_tweets(api_key, api_secret, "#bitcoin")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
+
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
+
+      
+    st.write(" ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
+
+    st.write("  ") 
+
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
 
 
    
@@ -358,6 +396,43 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
     
+    # Sentiment Analysis Etherium
+
+    st.write("  ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Etherium? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
+
+
+    df = get_tweets(api_key, api_secret, "#etherium")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
+
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
+
+      
+    st.write(" ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
+
+    st.write("  ") 
+
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
     
     
  
@@ -466,7 +541,44 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-   
+
+    # Sentiment Analysis Dogecoin
+
+    st.write("  ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Dogecoin? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
+
+
+    df = get_tweets(api_key, api_secret, "#dogecoin")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
+
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
+
+      
+    st.write(" ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
+
+    st.write("  ") 
+
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
 
 
   elif option == "GC=F":
@@ -557,7 +669,7 @@ elif choice == "Viewer":
 
     news = GoogleNews()
     news = GoogleNews("en", "d")
-    news.search("XAU")
+    news.search("gold usd")
     news.get_page(1)
     result = news.result()
     st.write("1. " + result[1]["title"])
@@ -572,6 +684,43 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
     
+    # Sentiment Analysis Gold
+
+    st.write("  ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Gold? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
+
+
+    df = get_tweets(api_key, api_secret, "#xauusd")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
+
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
+
+      
+    st.write(" ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
+
+    st.write("  ") 
+
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
 
 
   elif option == "ADA-USD":
@@ -662,7 +811,7 @@ elif choice == "Viewer":
 
     news = GoogleNews()
     news = GoogleNews("en", "d")
-    news.search("cryptocurrency")
+    news.search("cardano")
     news.get_page(1)
     result = news.result()
     st.write("1. " + result[1]["title"])
@@ -677,6 +826,43 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
     
+    # Sentiment Analysis ADAUSD
+
+    st.write("  ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about ADA-USD? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
+
+
+    df = get_tweets(api_key, api_secret, "#ADAUSD")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
+
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
+
+      
+    st.write(" ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
+
+    st.write("  ") 
+
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
 
 
   elif option == "BNB-USD":
@@ -781,7 +967,44 @@ elif choice == "Viewer":
     st.write("5. " + result[5]["title"])
     st.info("5. " + result[5]["link"])
 
-   
+
+    # Sentiment Analysis BNB
+
+    st.write("  ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about BNB? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
+
+
+    df = get_tweets(api_key, api_secret, "#BNB")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
+
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
+
+      
+    st.write(" ")
+
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
+
+    st.write("  ") 
+
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
 
 
   elif option == "LTC-USD":
@@ -872,7 +1095,7 @@ elif choice == "Viewer":
 
     news = GoogleNews()
     news = GoogleNews("en", "d")
-    news.search("Litecoin")
+    news.search("litecoin")
     news.get_page(1)
     result = news.result()
     st.write("1. " + result[1]["title"])
@@ -887,40 +1110,40 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
 
-  # Sentiment Analysis
+    # Sentiment Analysis Litecoin
 
-  st.write("  ")
+    st.write("  ")
 
-  st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about cryptocurrency? </p>
-  """, unsafe_allow_html=True) 
-    
-  st.write("  ")
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Litecoin? </p>
+    """, unsafe_allow_html=True) 
+      
+    st.write("  ")
 
 
-  df = get_tweets(api_key, api_secret, "#cryptocurrency")
-  df["Tweets"] = df["Tweets"].apply(Clean)
-  df["Subjectivity"] = df["Tweets"].apply(subjectivity)
-  df["Polarity"] = df["Tweets"].apply(polarity)
+    df = get_tweets(api_key, api_secret, "#litecoin")
+    df["Tweets"] = df["Tweets"].apply(Clean)
+    df["Subjectivity"] = df["Tweets"].apply(subjectivity)
+    df["Polarity"] = df["Tweets"].apply(polarity)
 
-  #WordCloud
-  words = " ".join([twts for twts in df["Tweets"]])
-  cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
-  plt.imshow(cloud, interpolation = "bilinear")
-  plt.axis("off")
-  st.pyplot()
+    #WordCloud
+    words = " ".join([twts for twts in df["Tweets"]])
+    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    plt.imshow(cloud, interpolation = "bilinear")
+    plt.axis("off")
+    st.pyplot()
 
-    
-  st.write(" ")
+      
+    st.write(" ")
 
-  st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
-  """, unsafe_allow_html=True)
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    """, unsafe_allow_html=True)
 
-  st.write("  ") 
+    st.write("  ") 
 
-  # Get Sentiment tweets
-  df["Sentiment"] = df["Polarity"].apply(sentiment)
-  df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
-  plt.title("Sentiment Analysis Bar Plot")
-  plt.xlabel("Sentiment")
-  plt.ylabel("Number of Tweets")
-  st.pyplot()
+    # Get Sentiment tweets
+    df["Sentiment"] = df["Polarity"].apply(sentiment)
+    df["Sentiment"].value_counts().plot(kind = "bar", figsize = (10,5))
+    plt.title("Sentiment Analysis Bar Plot")
+    plt.xlabel("Sentiment")
+    plt.ylabel("Number of Tweets")
+    st.pyplot()
