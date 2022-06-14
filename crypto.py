@@ -263,7 +263,7 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
