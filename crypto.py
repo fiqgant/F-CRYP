@@ -557,7 +557,7 @@ elif choice == "Viewer":
 
     news = GoogleNews()
     news = GoogleNews("en", "d")
-    news.search("XRP")
+    news.search("XAU")
     news.get_page(1)
     result = news.result()
     st.write("1. " + result[1]["title"])
