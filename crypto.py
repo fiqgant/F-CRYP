@@ -246,7 +246,7 @@ elif choice == "Viewer":
 
     
     
-    # Sentiment Analysis Etherium
+    # Sentiment Analysis Bitcoin
 
     st.write("  ")
 
@@ -414,7 +414,8 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
+    plt.figure( figsize=(20,10) )
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
@@ -560,7 +561,8 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
+    plt.figure( figsize=(20,10) )
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
@@ -685,7 +687,7 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
     
-    # Sentiment Analysis G
+    # Sentiment Analysis Shiba
 
     st.write("  ")
 
@@ -702,7 +704,8 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
+    plt.figure( figsize=(20,10) )
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
@@ -844,11 +847,11 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
+    plt.figure( figsize=(20,10) )
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
-
       
     st.write(" ")
 
@@ -986,7 +989,8 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
+    plt.figure( figsize=(20,10) )
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
@@ -1128,7 +1132,8 @@ elif choice == "Viewer":
 
     #WordCloud
     words = " ".join([twts for twts in df["Tweets"]])
-    cloud = WordCloud(random_state = 21, max_font_size = 100).generate(words)
+    cloud = WordCloud(width=1600, height=800, random_state = 21, max_font_size = 100).generate(words)
+    plt.figure( figsize=(20,10) )
     plt.imshow(cloud, interpolation = "bilinear")
     plt.axis("off")
     st.pyplot()
