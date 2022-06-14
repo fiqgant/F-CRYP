@@ -72,7 +72,7 @@ if choice == "Home":
 
 elif choice == "Viewer":
   st.sidebar.header("Please select cryptocurrency")
-  option = st.sidebar.selectbox("Ticker Symbol",("BTC-USD", "ETH-USD", "XRP-USD", "DOGE-USD", "ADA-USD", "BNB-USD", "LTC-USD",))
+  option = st.sidebar.selectbox("Ticker Symbol",("BTC-USD", "ETH-USD", "GC=F", "DOGE-USD", "ADA-USD", "BNB-USD", "LTC-USD",))
   today = datetime.date.today()
   before = today - datetime.timedelta(days=1400)
   start_date = st.sidebar.date_input('Start date', before)
@@ -469,7 +469,7 @@ elif choice == "Viewer":
    
 
 
-  elif option == "XRP-USD":
+  elif option == "GC=F":
     df = get_data(option, start_date, end_date)
     
     st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
@@ -525,7 +525,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> DOGE-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> GC=F Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
