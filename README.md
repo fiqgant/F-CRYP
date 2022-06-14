@@ -1,4 +1,4 @@
-# Y-CRYP
+# F-CRYP
 Analyze and predict your next crypto investment
 
 
