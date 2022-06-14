@@ -72,7 +72,7 @@ if choice == "Home":
 
 elif choice == "Viewer":
   st.sidebar.header("Please select cryptocurrency")
-  option = st.sidebar.selectbox("Ticker Symbol",("BTC-USD", "ETH-USD", "GC=F", "DOGE-USD", "ADA-USD", "BNB-USD", "LTC-USD",))
+  option = st.sidebar.selectbox("Ticker Symbol",("BTC-USD", "ETH-USD", "SHIB-USD", "DOGE-USD", "ADA-USD", "BNB-USD", "LTC-USD",))
   today = datetime.date.today()
   before = today - datetime.timedelta(days=1400)
   start_date = st.sidebar.date_input('Start date', before)
@@ -581,7 +581,7 @@ elif choice == "Viewer":
     st.pyplot()
 
 
-  elif option == "GC=F":
+  elif option == "SHIB-USD":
     df = get_data(option, start_date, end_date)
     
     st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
@@ -637,7 +637,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> GC=F Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Shiba Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -669,7 +669,7 @@ elif choice == "Viewer":
 
     news = GoogleNews()
     news = GoogleNews("en", "d")
-    news.search("gold usd")
+    news.search("shiba usd")
     news.get_page(1)
     result = news.result()
     st.write("1. " + result[1]["title"])
@@ -688,13 +688,13 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Gold? </p>
+    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about shiba? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
 
 
-    df = get_tweets(api_key, api_secret, "#xauusd")
+    df = get_tweets(api_key, api_secret, "#shibausd")
     df["Tweets"] = df["Tweets"].apply(Clean)
     df["Subjectivity"] = df["Tweets"].apply(subjectivity)
     df["Polarity"] = df["Tweets"].apply(polarity)
