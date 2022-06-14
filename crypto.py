@@ -669,7 +669,7 @@ elif choice == "Viewer":
 
     news = GoogleNews()
     news = GoogleNews("en", "d")
-    news.search("shiba usd")
+    news.search("shiba")
     news.get_page(1)
     result = news.result()
     st.write("1. " + result[1]["title"])
@@ -684,7 +684,7 @@ elif choice == "Viewer":
     st.info("5. " + result[5]["link"])
 
     
-    # Sentiment Analysis Gold
+    # Sentiment Analysis G
 
     st.write("  ")
 
