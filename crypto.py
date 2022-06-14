@@ -22,7 +22,7 @@ import base64
 st.set_page_config( 
 layout="wide",  
 initial_sidebar_state="auto",
-page_title= "Y-CRYP",  
+page_title= "F-CRYP",  
 page_icon= "Images/Favicon.png", 
 )
 
@@ -58,7 +58,7 @@ if choice == "Home":
     
   st.write("")
 
-  st.write("""  <p style=" font-size: 15px; font-weight:normal; font-family:verdana"> Y-CRYP is a special web service that allows you to analyze and predict cryptocurrencies.</p>
+  st.write("""  <p style=" font-size: 15px; font-weight:normal; font-family:verdana"> F-CRYP is a special web service that allows you to analyze and predict cryptocurrencies.</p>
   """, unsafe_allow_html=True)
 
     
