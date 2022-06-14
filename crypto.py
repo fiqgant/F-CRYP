@@ -145,12 +145,12 @@ elif choice == "Viewer":
   if option == "BTC-USD":
     df = get_data(option, start_date, end_date)
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
 
     st.write("    ")
     st.write(df)
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -163,7 +163,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -177,7 +177,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -188,14 +188,14 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> BTC-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> BTC-USD Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -223,7 +223,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write("  ")    
@@ -250,7 +250,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Bitcoin? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about Bitcoin? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -272,7 +272,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -296,7 +296,7 @@ elif choice == "Viewer":
   elif option == "ETH-USD":
     df = get_data(option, start_date, end_date)
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -304,7 +304,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -316,7 +316,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -330,7 +330,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -341,7 +341,7 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
@@ -350,7 +350,7 @@ elif choice == "Viewer":
     st.write("  ")
 
     
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> ETH-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> ETH-USD Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -375,7 +375,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write(" ")   
@@ -401,7 +401,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Etherium? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about Etherium? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -423,7 +423,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -442,7 +442,7 @@ elif choice == "Viewer":
   elif option == "DOGE-USD":
     df = get_data(option, start_date, end_date)
     
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -450,7 +450,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -462,7 +462,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -476,7 +476,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -487,7 +487,7 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
@@ -495,7 +495,7 @@ elif choice == "Viewer":
     st.write("  ")
 
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> DOGE-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> DOGE-USD Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -520,7 +520,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write(" ")   
@@ -548,7 +548,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Dogecoin? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about Dogecoin? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -570,7 +570,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -587,7 +587,7 @@ elif choice == "Viewer":
   elif option == "SHIB-USD":
     df = get_data(option, start_date, end_date)
     
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -595,7 +595,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -607,7 +607,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -621,7 +621,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -632,7 +632,7 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
@@ -640,7 +640,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Shiba Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Shiba Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -665,7 +665,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write(" ")   
@@ -691,7 +691,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about shiba? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about shiba? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -713,7 +713,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -730,7 +730,7 @@ elif choice == "Viewer":
   elif option == "ADA-USD":
     df = get_data(option, start_date, end_date)
     
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -738,7 +738,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -750,7 +750,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -764,7 +764,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -775,7 +775,7 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
@@ -783,7 +783,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> ADA-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> ADA-USD Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -808,7 +808,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write(" ")   
@@ -834,7 +834,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about ADA-USD? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about ADA-USD? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -855,7 +855,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -872,7 +872,7 @@ elif choice == "Viewer":
   elif option == "BNB-USD":
     df = get_data(option, start_date, end_date)
     
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -880,7 +880,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -892,7 +892,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -906,7 +906,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -917,7 +917,7 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
@@ -925,7 +925,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> BNB-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> BNB-USD Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -950,7 +950,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write(" ")   
@@ -976,7 +976,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about BNB? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about BNB? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -998,7 +998,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
@@ -1015,7 +1015,7 @@ elif choice == "Viewer":
   elif option == "LTC-USD":
     df = get_data(option, start_date, end_date)
     
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Raw Data </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Raw Data </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -1023,7 +1023,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Close Price </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Close Price </p>
   """, unsafe_allow_html=True)
     st.write("    ")
     st.line_chart(df["Close"])
@@ -1035,7 +1035,7 @@ elif choice == "Viewer":
     st.write(" ")
     macd = MACD(df["Close"]).macd()
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Moving Average Convergence Divergence </p>
   """, unsafe_allow_html=True)
     st.write(" ")
 
@@ -1049,7 +1049,7 @@ elif choice == "Viewer":
     bb["bb_l"] = bb_bands.bollinger_lband()
     bb = bb[["Close","bb_h","bb_l"]]
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Bollinger Bands </p>
   """, unsafe_allow_html=True)
     st.line_chart(bb)
 
@@ -1060,7 +1060,7 @@ elif choice == "Viewer":
     # Resistence Strength Indicator
     
     rsi = RSIIndicator(df["Close"]).rsi()
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Resistence Strength Indicator </p>
   """, unsafe_allow_html=True)
     st.write(" ")
     st.line_chart(rsi)
@@ -1068,7 +1068,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> LTC-USD Forecast using Facebook Prophet </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> LTC-USD Forecast using Facebook Prophet </p>
   """, unsafe_allow_html=True) 
     
     st.write("  ")
@@ -1093,7 +1093,7 @@ elif choice == "Viewer":
 
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Latest News </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Latest News </p>
   """, unsafe_allow_html=True)
 
     st.write(" ")   
@@ -1119,7 +1119,7 @@ elif choice == "Viewer":
 
     st.write("  ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> How generally users feel about Litecoin? </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> How generally users feel about Litecoin? </p>
     """, unsafe_allow_html=True) 
       
     st.write("  ")
@@ -1141,7 +1141,7 @@ elif choice == "Viewer":
       
     st.write(" ")
 
-    st.write(""" <p style=" color:#EC6F62; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
+    st.write(""" <p style=" color:#7db9e6; font-size: 30px; font-weight:bold"> Sentiment Bar Plot  </p>
     """, unsafe_allow_html=True)
 
     st.write("  ") 
